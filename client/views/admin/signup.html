@@ -1,0 +1,36 @@
+<template name="signup">
+<form id="signUp">
+  {{#if error}}
+    <span id="error" style="color: red;">
+      {{error}}<br>
+    </span>
+  {{/if}}
+Company Name: 		<input type="text" id="companyname" placeholder="Company Name" /><br>
+User: 				{{currentUser}}<br>
+Address: 			<input type="text" id="address" placeholder="Address" /><br>
+Phone:				<input type="tel" id="phone" placeholder="Phone" /><br>
+<a type="submit" id="btnCompanySignUp" class="btn btn-primary CompanySignUp">Sign Up Company</a>
+</form>
+</template>
+
+<template name="signupCompanyModal">
+	<div id="deleteaccount" class="modal fade" tabindex="-1" data-width="760" style="display:none;">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				{{> deleteAccountModalInner}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="signupCompanyModalInner">
+	{{#with userInScope}}
+	 	<div class="modal-body">
+	 		<h4>Are you sure you want to delete {{email}}?</h4>
+	 	</div>
+	 	<div class="modal-footer">
+			<button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+			<button type="button" class="btn btn-danger">Delete</button>
+		</div>
+	{{/with}}
+</template>

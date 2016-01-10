@@ -1,0 +1,1 @@
+Company = new Meteor.Collection('company');

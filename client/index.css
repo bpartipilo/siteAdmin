@@ -1,0 +1,22 @@
+/* CSS declarations go here */
+.datagrid table { border-collapse: collapse; text-align: left; width: 100%; } 
+.datagrid {font: normal 12px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; border: 1px solid #652299; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+.datagrid table td, .datagrid table th { padding: 3px 10px; }
+.datagrid table thead th {background: #003366; color:#FFFFFF; font-size: 15px; font-weight: bold; border-left: 1px solid #714399; } 
+.datagrid table thead th:first-child { border: none; }
+.datagrid table tbody td { border-left: 1px solid #E7BDFF;font-size: 16px;border-bottom: 1px solid #E7BDFF;font-weight: normal; }
+.datagrid table tbody td:first-child { border-left: none; }
+.datagrid table tbody tr:last-child td { border-bottom: none; }
+/* .save, .updateCar, .newCar {background: #903535;} */
+.carReady{
+    background-color: yellow;
+    color: black;
+}
+.datagrid table tbody tr.carPrep{
+    background-color:blue;
+    color: #FFFFFF;
+}
+.carWait{
+	background-color: red;
+	color: black;
+}
