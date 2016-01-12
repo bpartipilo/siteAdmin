@@ -11,7 +11,7 @@ Template.modifyPorterModalInner.helpers({
          var arrayPort = porters.split(',');
          var drivers = template.find("#driver-name").value;
          var arrayDrive = drivers.split(',');
-         Meteor.call( 'updatePorter',arrayAsms,arrayPort,arrayDrive, Meteor.user().profile.company);		
+         Meteor.call( 'updatePorter',arrayAsms,arrayPort,arrayDrive, Session.get("selectedCompany"));		
 			$("#modifyPorters").modal("hide");
 			$('#modPorterForm').get(0).reset();
 		},
@@ -23,7 +23,7 @@ Template.modifyPorterModalInner.helpers({
          var arrayPort = porters.split(',');
          var drivers = template.find("#driver-name").value;
          var arrayDrive = drivers.split(',');
-         Meteor.call( 'updatePorter',arrayAsms,arrayPort,arrayDrive, Meteor.user().profile.company);				
+         Meteor.call( 'updatePorter',arrayAsms,arrayPort,arrayDrive, Session.get("selectedCompany"));				
 			$("#modifyPorters").modal("hide");
 			$('#modPorterForm').get(0).reset();
 		},

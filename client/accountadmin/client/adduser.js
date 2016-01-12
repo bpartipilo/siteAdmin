@@ -9,7 +9,7 @@
           	password: template.find("#enroll-account-password").value,
           	profile: {
           		name: template.find("#enroll-account-name").value,
-          		company: Meteor.user().profile.company,
+          		company: Session.get("selectedCompany"),
           		}
           	};
           	createUserServer(options);			

@@ -53,17 +53,10 @@
 									</button>
 									<ul class="dropdown-menu pull-right" role="menu">
 										<li>
-											<a href="#">Action</a>
+											<a href="#">Edit Company</a>
 										</li>
 										<li>
-											<a href="#">Another action</a>
-										</li>
-										<li>
-											<a href="#">Something else here</a>
-										</li>
-										<li class="divider"></li>
-										<li>
-											<a href="#">Separated link</a>
+											<a href="#">Remove Company</a>
 										</li>
 									</ul>
 								</div>
@@ -95,27 +88,16 @@
 						<div class="panel-heading">
 							<i class="fa fa-fax fa-fw"></i> {{selectedCompany.companyname}} Users
 							<div class="pull-right">
-								<div class="btn-group">
-									<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-										Actions
-										<span class="caret"></span>
-									</button>
-									<ul class="dropdown-menu pull-right" role="menu">
-										<li>
-											<a href="#">Action</a>
-										</li>
-										<li>
-											<a href="#">Another action</a>
-										</li>
-										<li>
-											<a href="#">Something else here</a>
-										</li>
-										<li class="divider"></li>
-										<li>
-											<a href="#">Separated link</a>
-										</li>
-									</ul>
-								</div>
+
+								<div class="input-group input-group-sm">
+                				<input type="text" class="form-control search-input-filter" value="{{searchFilter}}">
+                				<span class="input-group-btn">
+                    				<button class="btn btn-default btn-xs" type="button"><span class="glyphicon glyphicon-search"></span></button>                   
+										<button class="btn btn-default btn-xs" type="button" data-toggle="modal" href="#updateroles">Manage Roles</button>
+                    				<button class="btn btn-default btn-xs" type="button" data-toggle="modal" href="#adduserSA">Add User</button>
+               			 	</span>
+               			 </div>
+
 							</div>
 						</div>
 						<!-- /.panel-body -->
@@ -129,18 +111,6 @@
 </template>
 
 <template name="accountsSiteAdmin">
-    <div class="row accounts-search">
-        <div class="col-sm-offset-4 col-sm-8 col-md-offset-6 col-md-6 col-lg-offset-8 col-lg-4">
-            <div class="input-group">
-                <input type="text" class="form-control search-input-filter" value="{{searchFilter}}">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>                   
-                    <!--<button class="btn btn-default" type="button" data-toggle="modal" href="#updateroles">Manage Roles</button>-->
-                    <button class="btn btn-default" type="button" data-toggle="modal" href="#adduserSA">Add User</button>
-                </span>
-            </div>
-        </div>
-    </div>
     <table class='table table-striped'>
         <thead>
             <tr>
